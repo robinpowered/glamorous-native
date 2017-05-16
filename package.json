@@ -1,0 +1,57 @@
+{
+  "name": "glamorous-native",
+  "version": "0.0.1",
+  "description": "React glamorous library for React Native",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "lint": "eslint src/",
+    "validate": "npm run lint && npm run test",
+    "report-coverage": "codecov"
+  },
+  "keywords": [
+    "react",
+    "react-native",
+    "glamorous"
+  ],
+  "author": "",
+  "license": "MIT",
+  "jest": {
+    "preset": "jest-react-native",
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
+  },
+  "devDependencies": {
+    "babel-preset-react-native": "^1.9.2",
+    "codecov": "^2.2.0",
+    "enzyme": "^2.8.2",
+    "eslint": "^3.19.0",
+    "eslint-config-kentcdodds": "^12.2.1",
+    "jest": "^20.0.1",
+    "jest-enzyme": "^3.1.1",
+    "jest-react-native": "^18.0.0",
+    "node-jsdom": "^3.1.5",
+    "react": "16.0.0-alpha.6",
+    "react-addons-test-utils": "^15.5.1",
+    "react-dom": "^15.5.4",
+    "react-native": "^0.44.0",
+    "react-native-mock": "^0.3.1",
+    "react-native-mock-render": "0.0.5",
+    "react-test-renderer": "^15.5.4"
+  },
+  "dependencies": {
+    "brcast": "^2.0.0",
+    "jsdom": "^9.2.1"
+  },
+  "eslintConfig": {
+    "extends": [
+      "kentcdodds",
+      "kentcdodds/jest",
+      "kentcdodds/react",
+      "kentcdodds/prettier"
+    ],
+    "rules": {
+      "import/prefer-default-export": 0
+    }
+  }
+}

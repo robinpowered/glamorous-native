@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a non-glamorous component with theme 1`] = `
+<View
+  style={
+    Object {
+      "padding": "10px",
+    }
+  }
+/>
+`;
+
+exports[`with theme prop of padding 10 1`] = `
+<View
+  style={
+    Object {
+      "padding": 10,
+    }
+  }
+/>
+`;
+
+exports[`without theme provider 1`] = `<View />`;

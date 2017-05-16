@@ -1,0 +1,14 @@
+{
+  "extends": [
+    "kentcdodds",
+    "kentcdodds/jest",
+    "kentcdodds/react",
+    "kentcdodds/prettier"
+  ],
+  "rules": {
+    "import/prefer-default-export": 0
+  },
+  "globals": {
+    "__DEV__": true
+  }
+}

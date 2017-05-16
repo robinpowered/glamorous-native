@@ -1,0 +1,108 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`allows you to specify the tag rendered by a component 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "height": 1,
+        "width": 1,
+      },
+      Object {
+        "width": 2,
+      },
+      Object {
+        "width": 2,
+      },
+    ]
+  }
+/>
+`;
+
+exports[`merges composed component forwardProps 1`] = `
+<View
+  style={null}
+/>
+`;
+
+exports[`merges composed component styles for reasonable overrides 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "marginRight": 1,
+        "marginTop": 1,
+        "paddingRight": 1,
+        "paddingTop": 1,
+      },
+      Object {
+        "marginBottom": 2,
+        "marginRight": 2,
+        "paddingRight": 2,
+        "paddingTop": 2,
+      },
+      Object {
+        "marginBottom": 3,
+        "marginLeft": 3,
+      },
+      Array [
+        Object {
+          "marginLeft": 4,
+          "paddingTop": 4,
+        },
+        Object {
+          "paddingRight": 5,
+          "paddingTop": 5,
+        },
+        Object {
+          "paddingRight": 6,
+        },
+      ],
+      Array [
+        Object {
+          "marginLeft": 4,
+          "paddingTop": 4,
+        },
+        Object {
+          "paddingRight": 5,
+          "paddingTop": 5,
+        },
+        Object {
+          "paddingRight": 6,
+        },
+      ],
+    ]
+  }
+/>
+`;
+
+exports[`renders a component with theme properties 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "red",
+      },
+      Object {
+        "padding": "10px",
+      },
+    ]
+  }
+/>
+`;
+
+exports[`styles can be functions that accept props 1`] = `
+<View
+  margin={2}
+  style={
+    Array [
+      Object {
+        "marginTop": 1,
+      },
+      Object {
+        "marginTop": 2,
+      },
+    ]
+  }
+/>
+`;
