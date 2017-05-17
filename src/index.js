@@ -29,3 +29,18 @@ Object.assign(
 
 export default glamorous
 export {ThemeProvider, withTheme}
+
+// Temporary workaround to allow named component exports
+// eg: import {View} from 'glamorous-native
+export const FlatList = glamorous.FlatList
+export const Image = glamorous.Image
+export const ListView = glamorous.ListView
+export const ScrollView = glamorous.ScrollView
+export const SectionList = glamorous.SectionList
+export const Text = glamorous.Text
+export const TextInput = glamorous.TextInput
+export const TouchableHighlight = glamorous.TouchableHighlight
+export const TouchableNativeFeedback = glamorous.TouchableNativeFeedback
+export const TouchableOpacity = glamorous.TouchableOpacity
+export const TouchableWithoutFeedback = glamorous.TouchableWithoutFeedback
+export const View = glamorous.View
