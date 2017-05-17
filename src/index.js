@@ -1,40 +1,12 @@
-import {
-  FlatList,
-  Image,
-  ListView,
-  ScrollView,
-  SectionList,
-  Text,
-  TextInput,
-  TouchableHighlight,
-  TouchableNativeFeedback,
-  TouchableOpacity,
-  TouchableWithoutFeedback,
-  View,
-} from 'react-native'
 import createGlamorous from './create-glamorous'
 import splitProps from './split-props'
 import ThemeProvider from './theme-provider'
 import withTheme from './with-theme'
+import reactNativeElements, {
+  ReactNativeElementMap,
+} from './react-native-elements'
 
 const glamorous = createGlamorous(splitProps)
-
-const ReactNativeElementMap = {
-  FlatList,
-  Image,
-  ListView,
-  ScrollView,
-  SectionList,
-  Text,
-  TextInput,
-  TouchableHighlight,
-  TouchableNativeFeedback,
-  TouchableOpacity,
-  TouchableWithoutFeedback,
-  View,
-}
-
-const reactNativeElements = Object.keys(ReactNativeElementMap)
 
 Object.assign(
   glamorous,
