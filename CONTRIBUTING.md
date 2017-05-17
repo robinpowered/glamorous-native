@@ -27,7 +27,6 @@ If it is an example that requires you to create a new, albeit, mini-project, her
   - Run `npm start examples` to make sure all your setup is correct.
 
 You should have a great example running on `glamorous` by now. Go ahead and submit a PR!
-Also you can refer to the existing example at [`with-jest`][with-jest]
 
 [egghead]: https://egghead.io/series/how-to-contribute-to-an-open-source-project-on-github
 [examples-readme]: ./examples

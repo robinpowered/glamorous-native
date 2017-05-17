@@ -2,12 +2,15 @@
 
 # glamorous-native
 
-A react-native port of [paypal/glamorous](https://github.com/paypal/glamorous) (inspired via https://github.com/paypal/glamorous/issues/7). Glamorous is React component styling solved with an elegant ([inspired](https://github.com/paypal/glamorous#inspiration)) API, [small footprint](https://github.com/paypal/glamorous#size), and great performance.
+[glamorous][glamorous] for React Native. React component styling solved with an elegent ([inspired](#inspiration)) API, small footprint, and great performance. For full feature documentation, see the [glamorous docs][glamorous-readme].
 
+> Read [the `glamorous` intro blogpost][intro-blogpost]
 
 [![Build Status][build-badge]][build]
 [![Code Coverage][coverage-badge]][coverage]
+[![MIT License][license-badge]][LICENSE]
 [![PRs Welcome][prs-badge]][prs]
+[![Chat][chat-badge]][chat]
 [![Examples][examples-badge]][examples]
 
 ## The Problem
@@ -40,7 +43,7 @@ With `glamorous-native`, that example above looks as simple as this:
 ```js
 const MyStyledText = glamorous.text({
   fontSize: 20,
-  textAlign: 'center';
+  textAlign: 'center'
 })
 ```
 
@@ -49,7 +52,7 @@ In fact, it's even better, because there are a bunch of features that make compo
 Oh, and what if you don't care to give `MyStyledText` a name? If you just want a text that's styled using `StyleSheet`? You can do that too:
 
 ```js
-import {Text} from 'glamorous';
+import {Text} from 'glamorous-native';
 
 function Section() {
   return (
@@ -63,7 +66,7 @@ function Section() {
 }
 ```
 
-> See more [examples](examples)!
+> See more [examples][examples]!
 
 So that's the basics of this solution.. Let's get to the details!
 
@@ -71,9 +74,16 @@ So that's the basics of this solution.. Let's get to the details!
 
 TBD
 
+## Inspiration
+
+This package was inspired by the work from people's work on the following projects:
+- [glamorous][glamorous]
+- [styled-components](https://github.com/styled-components/styled-components)
+- [jsxstyle](https://github.com/smyte/jsxstyle)
+
 ## Contributing
 
-This project is in active development approaching completion. Your contributions are welcome! Take a look at the [contributing guide](contributing) and browse through the [good first task issues](https://github.com/robinpowered/glamorous-native/labels/good%20first%20task).
+This project is in active development approaching completion. Your contributions are welcome! Take a look at the [contributing guide][contributing] and browse through the [good first task issues](https://github.com/robinpowered/glamorous-native/labels/good%20first%20task).
 
 
 
@@ -81,8 +91,15 @@ This project is in active development approaching completion. Your contributions
 [build]: https://travis-ci.org/robinpowered/glamorous-native
 [coverage-badge]: https://img.shields.io/codecov/c/github/robinpowered/glamorous-native.svg?style=flat-square
 [coverage]: https://codecov.io/github/robinpowered/glamorous-native
+[license-badge]: https://img.shields.io/npm/l/glamorous-native.svg?style=flat-square
+[license]: https://github.com/robinpowered/glamorous-native/blob/master/LICENSE
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
 [prs]: http://makeapullrequest.com
 [examples-badge]: https://img.shields.io/badge/%F0%9F%92%A1-examples-8C8E93.svg?style=flat-square
 [examples]: ./examples
+[chat]: https://gitter.im/paypal/glamorous
+[chat-badge]: https://img.shields.io/gitter/room/paypal/glamorous.svg?style=flat-square
 [contributing]: ./CONTRIBUTING.md
+[glamorous]: https://github.com/paypal/glamorous
+[glamorous-readme]: https://github.com/paypal/glamorous#readme
+[intro-blogpost]: https://hackernoon.com/introducing-glamorous-fb3c9f4ed20e
