@@ -12,6 +12,7 @@
 [![PRs Welcome][prs-badge]][prs]
 [![Chat][chat-badge]][chat]
 [![Examples][examples-badge]][examples]
+[![Semantic Releases][semantic-release-badge]][semantic-release]
 
 ## The Problem
 
@@ -520,6 +521,8 @@ This project is in active development approaching completion. Your contributions
 [license]: https://github.com/robinpowered/glamorous-native/blob/master/LICENSE
 [prs-badge]: https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square
 [prs]: http://makeapullrequest.com
+[semantic-release-badge]: https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg?style=flat-square]
+[semantic-release]: https://github.com/robinpowered/glamorous-native/releases
 [examples-badge]: https://img.shields.io/badge/%F0%9F%92%A1-examples-8C8E93.svg?style=flat-square
 [examples]: ./examples
 [chat]: https://gitter.im/paypal/glamorous
