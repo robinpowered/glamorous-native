@@ -1,5 +1,7 @@
 # Examples
 
-Coming soon!
+You'll soon find some code samples here.
 
-In the mean time, try out the simple example in `react-native-glamorous` to see how `glamorous` works with `react-native`
+---
+
+To try a React Native project with `glamorous-native`, open [react-native-glamorous](react-native-glamorous) or [react-native-glamorous-themes](react-native-glamorous-themes) and follow the installation steps in the README.
