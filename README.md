@@ -322,7 +322,7 @@ The `displayName` of a React component is used by React in the [React DevTools][
 const MyComponent = props => <Text {...props} />
 const myGlamorousComponentFactory = glamorous(
   MyComponent,
-  {displayName: 'MyGlamorousComponent}
+  {displayName: 'MyGlamorousComponent'}
 )
 ```
 
@@ -361,7 +361,7 @@ const MyComponent = ({shouldRender, ...rest}) => (
   shouldRender ? <Text {...rest} /> : null
 )
 const MyStyledComponent = glamorous(MyComponent, {
-  forwardProps: ['shouldRender],
+  forwardProps: ['shouldRender'],
   rootEl: Text
 })(props => ({
   fontSize: props.big ? 36 : 24
