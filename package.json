@@ -43,9 +43,12 @@
   },
   "dependencies": {
     "brcast": "^2.0.0",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.0.0",
     "jsdom": "^9.2.1",
     "nps": "^5.1.0",
-    "nps-utils": "^1.2.0"
+    "nps-utils": "^1.2.0",
+    "semantic-release": "^6.3.6"
   },
   "eslintConfig": {
     "extends": [
@@ -57,5 +60,18 @@
     "rules": {
       "import/prefer-default-export": 0
     }
-  }
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-conventional-changelog"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/robinpowered/glamorous-native.git"
+  },
+  "bugs": {
+    "url": "https://github.com/robinpowered/glamorous-native/issues"
+  },
+  "homepage": "https://github.com/robinpowered/glamorous-native#readme"
 }
