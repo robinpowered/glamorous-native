@@ -23,9 +23,15 @@
       "/examples/"
     ]
   },
+  "peerDependencies": {
+    "react": ">=15.4.0 || >=16.0.0-alpha.6",
+    "react-native": ">=0.40"
+  },
   "devDependencies": {
     "babel-preset-react-native": "^1.9.2",
     "codecov": "^2.2.0",
+    "commitizen": "^2.9.6",
+    "cz-conventional-changelog": "^2.0.0",
     "enzyme": "^2.8.2",
     "eslint": "^3.19.0",
     "eslint-config-kentcdodds": "^12.2.1",
@@ -33,22 +39,19 @@
     "jest-enzyme": "^3.1.1",
     "jest-react-native": "^18.0.0",
     "node-jsdom": "^3.1.5",
+    "nps": "^5.1.0",
+    "nps-utils": "^1.2.0",
     "react": "16.0.0-alpha.6",
     "react-addons-test-utils": "^15.5.1",
     "react-dom": "^15.5.4",
     "react-native": "^0.44.0",
     "react-native-mock": "^0.3.1",
     "react-native-mock-render": "0.0.5",
-    "react-test-renderer": "^15.5.4"
+    "react-test-renderer": "^15.5.4",
+    "semantic-release": "^6.3.6"
   },
   "dependencies": {
-    "brcast": "^2.0.0",
-    "commitizen": "^2.9.6",
-    "cz-conventional-changelog": "^2.0.0",
-    "jsdom": "^9.2.1",
-    "nps": "^5.1.0",
-    "nps-utils": "^1.2.0",
-    "semantic-release": "^6.3.6"
+    "brcast": "^2.0.0"
   },
   "eslintConfig": {
     "extends": [
