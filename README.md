@@ -1,3 +1,9 @@
+# Feedback Requested
+
+This is a proposal for the official `glamorous-native` project -- a complimentary `glamorous` package for React Native.
+
+Please share any feedback in [paypal/glamorous#7](https://github.com/paypal/glamorous/issues/7#issuecomment-302169727), or [open an issue](https://github.com/robinpowered/glamorous-native/issues) on this project.
+
 <img src="https://github.com/robinpowered/glamorous-native/raw/master/other/logo/full.png" alt="glamorous-native logo" title="glamorous-native" align="right" width="150" height="150" />
 
 # glamorous-native
