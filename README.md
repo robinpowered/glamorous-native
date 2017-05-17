@@ -2,7 +2,7 @@
 
 # glamorous-native
 
-[glamorous][glamorous] for React Native. React component styling solved with an elegent ([inspired](#inspiration)) API, small footprint, and great performance. For full feature documentation, see the [glamorous docs][glamorous-readme].
+[glamorous][glamorous] for React Native. React component styling solved with an elegant ([inspired](#inspiration)) API, small footprint, and great performance. For full feature documentation, see the [glamorous docs][glamorous-readme].
 
 > Read [the `glamorous` intro blogpost][intro-blogpost]
 
@@ -15,7 +15,7 @@
 
 ## The Problem
 
-In React Native, we write styles within our JS, but you don't like having to create entire component functions just for styling purposes. You don't wnat to give a name to something that's purely style-related. And it's kind of annoying to do the `StyleSheet.create`, conditionals, and props-forwarding song and dance.
+In React Native, we write styles within our JS, but you don't like having to create entire component functions just for styling purposes. You don't want to give a name to something that's purely style-related. And it's kind of annoying to do the `StyleSheet.create`, conditionals, and props-forwarding song and dance.
 
 For example, this is what you have to do with `StyleSheet`:
 
