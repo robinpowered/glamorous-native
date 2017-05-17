@@ -2,7 +2,7 @@
   "name": "glamorous-native",
   "version": "0.0.1",
   "description": "React glamorous library for React Native",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "start": "nps",
     "test": "nps test"
@@ -17,7 +17,11 @@
   "jest": {
     "preset": "jest-react-native",
     "coverageDirectory": "./coverage/",
-    "collectCoverage": true
+    "collectCoverage": true,
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/examples/"
+    ]
   },
   "devDependencies": {
     "babel-preset-react-native": "^1.9.2",

@@ -1,6 +1,6 @@
 # glamorous-native
 
-A react-native port of [paypal/glamorous](https://github.com/paypal/glamorous). Glamorous is React component styling solved with an elegant ([inspired](https://github.com/paypal/glamorous#inspiration)) API, [small footprint](https://github.com/paypal/glamorous#size), and great performance.
+A react-native port of [paypal/glamorous](https://github.com/paypal/glamorous) (inspired via https://github.com/paypal/glamorous/issues/7). Glamorous is React component styling solved with an elegant ([inspired](https://github.com/paypal/glamorous#inspiration)) API, [small footprint](https://github.com/paypal/glamorous#size), and great performance.
 
 
 [![Build Status][build-badge]][build]
