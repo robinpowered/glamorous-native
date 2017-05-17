@@ -35,10 +35,17 @@ module.exports = {
       ),
     },
     examples: {
-      reactNative: {
+      basic: {
         description: 'A simple react-native project using glamorous-native',
         script: series(
           'cd examples/react-native-glamorous',
+          'npm install'
+        ),
+      },
+      themes: {
+        description: 'A react-native project using glamorous-native themes',
+        script: series(
+          'cd example/react-native-glamorous-themes',
           'npm install'
         ),
       },
