@@ -52,7 +52,7 @@ In fact, it's even better, because there are a bunch of features that make compo
 Oh, and what if you don't care to give `MyStyledText` a name? If you just want a text that's styled using `StyleSheet`? You can do that too:
 
 ```js
-import {Text} from 'glamorous-native';
+const {Text} = glamorous;
 
 function Section() {
   return (

@@ -1,5 +1,7 @@
 import React from 'react'
-import glamorous, {ThemeProvider, TouchableOpacity} from 'glamorous-native'
+import glamorous, {ThemeProvider} from 'glamorous-native'
+
+const {TouchableOpacity} = glamorous
 
 // A View that reflects a specified theme
 const ThemedView = glamorous.view((props, theme) => ({
