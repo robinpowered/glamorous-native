@@ -4,10 +4,8 @@
   "description": "React glamorous library for React Native",
   "main": "index.js",
   "scripts": {
-    "test": "jest --coverage",
-    "lint": "eslint src/",
-    "validate": "npm run lint && npm run test",
-    "report-coverage": "codecov"
+    "start": "nps",
+    "test": "nps test"
   },
   "keywords": [
     "react",
@@ -41,7 +39,9 @@
   },
   "dependencies": {
     "brcast": "^2.0.0",
-    "jsdom": "^9.2.1"
+    "jsdom": "^9.2.1",
+    "nps": "^5.1.0",
+    "nps-utils": "^1.2.0"
   },
   "eslintConfig": {
     "extends": [
