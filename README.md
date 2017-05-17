@@ -1,3 +1,5 @@
+<img src="https://github.com/robinpowered/glamorous-native/raw/master/other/logo/full.png" alt="glamorous-native logo" title="glamorous-native" align="right" width="150" height="150" />
+
 # glamorous-native
 
 A react-native port of [paypal/glamorous](https://github.com/paypal/glamorous) (inspired via https://github.com/paypal/glamorous/issues/7). Glamorous is React component styling solved with an elegant ([inspired](https://github.com/paypal/glamorous#inspiration)) API, [small footprint](https://github.com/paypal/glamorous#size), and great performance.
