@@ -46,6 +46,11 @@ export default function createGlamorous(splitProps) {
         state = {theme: null}
         setTheme = theme => this.setState({theme})
 
+        constructor(props, context) {
+          super(props, context)
+          this.onRef = this.onRef.bind(this)
+        }
+
         componentWillMount() {
           const {theme} = this.props
 
@@ -72,6 +77,19 @@ export default function createGlamorous(splitProps) {
           this.unsubscribe && this.unsubscribe()
         }
 
+        setNativeProps(nativeProps) {
+          if (this.innerComponent) {
+            this.innerComponent.setNativeProps(nativeProps)
+          }
+        }
+
+        onRef(innerComponent) {
+          this.innerComponent = innerComponent
+          if (this.props.innerRef) {
+            this.props.innerRef(innerComponent)
+          }
+        }
+
         render() {
           const props = this.props
 
@@ -93,7 +111,7 @@ export default function createGlamorous(splitProps) {
 
           return React.createElement(GlamorousComponent.comp, {
             ...toForward,
-            ref: props.innerRef,
+            ref: this.onRef,
             style: fullStyles.length > 0 ? fullStyles : null,
           })
         }
