@@ -13,6 +13,8 @@ Object.assign(
   reactNativeElements.reduce((getters, key) => {
     const tag = key.toLowerCase()
     getters[tag] = glamorous(ReactNativeElementMap[key])
+    // backward compatible camel case
+    getters[camelCase(key)] = getters[tag]
     return getters
   }, {}),
 )
@@ -26,6 +28,10 @@ Object.assign(
     return comps
   }, {}),
 )
+
+function camelCase(tagName) {
+  return tagName.slice(0, 1).toLowerCase() + tagName.slice(1)
+}
 
 export default glamorous
 export {ThemeProvider, withTheme}
