@@ -28,8 +28,8 @@
     ]
   },
   "peerDependencies": {
-    "react": ">=15.4.0 || >=16.0.0-alpha.6",
-    "react-native": ">=0.40"
+    "react": ">=0.14.5 || >=16.0.0-alpha.6",
+    "react-native": "^0.14.0"
   },
   "devDependencies": {
     "babel-preset-react-native": "^1.9.2",
