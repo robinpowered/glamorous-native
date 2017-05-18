@@ -49,6 +49,13 @@ module.exports = {
           'npm install'
         ),
       },
+      animations: {
+        description: 'A react-native project using glamorous-native with animations',
+        script: series(
+          'cd example/react-native-glamorous-animated',
+          'npm install'
+        ),
+      },
       // add yours here!
     },
   },
