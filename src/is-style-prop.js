@@ -1,4 +1,5 @@
 import {
+  Animated,
   FlatList,
   Image,
   ListView,
@@ -20,6 +21,8 @@ const viewStyleProps = Object.keys(ViewStylePropTypes)
 const textStyleProps = Object.keys(TextStylePropTypes)
 
 const viewStyleComponents = [
+  Animated.Image,
+  Animated.View,
   FlatList,
   Image,
   ListView,
@@ -35,6 +38,7 @@ const viewStyleComponents = [
 ]
 
 const textStyleComponents = [
+  Animated.Text,
   Text,
   TextInput,
 ]
