@@ -1,6 +1,6 @@
 {
   "name": "glamorous-native",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "React glamorous library for React Native",
   "main": "src/index.js",
   "scripts": {
@@ -10,7 +10,11 @@
   "keywords": [
     "react",
     "react-native",
-    "glamorous"
+    "glamorous",
+    "styled-components",
+    "jsxstyle",
+    "css-in-js",
+    "cssinjs"
   ],
   "author": "Atticus White <atticus@robinpowered.com> (https://robinpowered.com/)",
   "license": "MIT",
