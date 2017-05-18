@@ -4,7 +4,7 @@
 
 [glamorous][glamorous] for React Native. React component styling solved with an elegant ([inspired](#inspiration)) API, small footprint, and great performance. For full feature documentation, see the [glamorous docs][glamorous-readme].
 
-> Read [the `glamorous` intro blogpost][intro-blogpost]
+> Read [the intro blogpost][intro-blogpost]
 
 [![Build Status][build-badge]][build]
 [![Code Coverage][coverage-badge]][coverage]
@@ -546,7 +546,7 @@ This project is in active development approaching completion. Your contributions
 [contributing]: ./CONTRIBUTING.md
 [glamorous]: https://github.com/paypal/glamorous
 [glamorous-readme]: https://github.com/paypal/glamorous#readme
-[intro-blogpost]: https://hackernoon.com/introducing-glamorous-fb3c9f4ed20e
+[intro-blogpost]: https://medium.com/robin-powered/introducing-glamorous-for-react-native-1b8365e7f33f
 [npm]: https://www.npmjs.com/
 [react-native-stylesheet]: https://facebook.github.io/react-native/docs/stylesheet.html
 [react-devtools]: https://github.com/facebook/react-devtools
