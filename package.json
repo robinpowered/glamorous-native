@@ -29,7 +29,7 @@
   },
   "peerDependencies": {
     "react": ">=0.14.5 || >=16.0.0-alpha.6",
-    "react-native": "^0.14.0"
+    "react-native": ">=0.14.0 && < 1"
   },
   "devDependencies": {
     "babel-preset-react-native": "^1.9.2",
