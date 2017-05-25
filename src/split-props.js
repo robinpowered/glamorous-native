@@ -5,12 +5,12 @@ function shouldForwardProperty(rootEl, propName) {
 }
 
 export default function splitProps({
-  style: styleOverrides = {},
   theme,
   innerRef,
   glam,
   ...rest
 }, {propsAreStyleOverrides, rootEl, forwardProps}) {
+  const styleOverrides = {}
   const returnValue = {toForward: {}, styleOverrides}
 
   if (!propsAreStyleOverrides) {
