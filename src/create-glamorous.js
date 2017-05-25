@@ -29,20 +29,6 @@ export default function createGlamorous(splitProps) {
       const styles = prepareStyles(unpreparedStyles)
 
       class GlamorousComponent extends React.Component {
-        static comp = comp
-        static propTypes = {
-          innerRef: PropTypes.func,
-          theme: PropTypes.object,
-        }
-
-        static contextTypes = {
-          [CHANNEL]: PropTypes.object,
-        }
-
-        static propTypes = {
-          // @TODO
-        }
-
         state = {theme: null}
         setTheme = theme => this.setState({theme})
 
@@ -107,6 +93,7 @@ export default function createGlamorous(splitProps) {
             props,
             styleOverrides,
             theme,
+            this.context,
           )
 
           return React.createElement(GlamorousComponent.comp, {
@@ -118,6 +105,37 @@ export default function createGlamorous(splitProps) {
       }
 
       GlamorousComponent.comp = comp
+
+      GlamorousComponent.propTypes = {
+        innerRef: PropTypes.func,
+        theme: PropTypes.object,
+      }
+
+      const defaultContextTypes = {
+        [CHANNEL]: PropTypes.object,
+      }
+      let userDefinedContextTypes = null
+
+      // configure the contextTypes to be settable by the user,
+      // however also retaining the glamorous channel.
+      Object.defineProperty(GlamorousComponent, 'contextTypes', {
+        enumerable: true,
+        configurable: true,
+        set(value) {
+          userDefinedContextTypes = value
+        },
+        get() {
+          // if the user has provided a contextTypes definition,
+          // merge the default context types with the provided ones.
+          if (userDefinedContextTypes) {
+            return {
+              ...defaultContextTypes,
+              ...userDefinedContextTypes,
+            }
+          }
+          return defaultContextTypes
+        },
+      })
 
       Object.assign(
         GlamorousComponent,
