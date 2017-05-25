@@ -33,5 +33,20 @@ function camelCase(tagName) {
   return tagName.slice(0, 1).toLowerCase() + tagName.slice(1)
 }
 
+// @TODO: automate the named exports
+export const Image = glamorous.Image
+export const ListView = glamorous.ListView
+export const ScrollView = glamorous.ScrollView
+export const Text = glamorous.Text
+export const TextInput = glamorous.TextInput
+export const TouchableHighlight = glamorous.TouchableHighlight
+export const TouchableNativeFeedback = glamorous.TouchableNativeFeedback
+export const TouchableOpacity = glamorous.TouchableOpacity
+export const TouchableWithoutFeedback = glamorous.TouchableWithoutFeedback
+export const View = glamorous.View
+// These are only on `glamorous` if the version of ReactNative supports them
+export const FlatList = glamorous.FlatList
+export const SectionList = glamorous.SectionList
+
 export default glamorous
 export {ThemeProvider, withTheme}
