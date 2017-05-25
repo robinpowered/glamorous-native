@@ -15,6 +15,7 @@ import {
   StyleSheet,
 } from 'react-native'
 import {shallow} from 'enzyme'
+import renderer from 'react-test-renderer'
 import glamorous from '../'
 
 describe('test', () => {
@@ -98,4 +99,13 @@ describe('default components', () => {
   expect(shallow(<glamorous.TouchableWithoutFeedback />)
     .find(TouchableWithoutFeedback)).toBeDefined()
   expect(shallow(<glamorous.View />).find(View)).toBeDefined()
+})
+
+it('styles as properties should have highest priority', () => {
+  expect(renderer.create(
+    <glamorous.View
+      style={{backgroundColor: 'green'}}
+      backgroundColor="blue"
+    />,
+  ).toJSON()).toMatchSnapshot()
 })
