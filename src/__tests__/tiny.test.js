@@ -22,12 +22,11 @@ test('should pass glam object prop', () => {
     ).toJSON(),
   ).toMatchSnapshot()
   expect(dynamicStyles).toHaveBeenCalledTimes(1)
-  expect(dynamicStyles).toHaveBeenCalledWith(
-    {
-      glam,
-      accessible: true,
-      theme, // this is just insidental because we have a theme prop
-    },
-    theme,
-  )
+  const props = {
+    glam,
+    accessible: true,
+    theme, // this is just incidental because we have a theme prop
+  }
+  const context = expect.any(Object)
+  expect(dynamicStyles).toHaveBeenCalledWith(props, theme, context)
 })

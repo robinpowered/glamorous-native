@@ -370,3 +370,21 @@ test('should recieve inner ref if specified', () => {
   expect(getRef).toHaveBeenCalled()
 })
 */
+
+it('should accept user defined contextTypes', () => {
+  const dynamicStyles = jest.fn()
+  const Child = glamorous.view(dynamicStyles)
+  Child.contextTypes = {
+    fontSize: React.PropTypes.number,
+  }
+
+  const context = {
+    fontSize: 24,
+  }
+
+  shallow(<Child />, {context})
+  expect(dynamicStyles).toHaveBeenCalledTimes(1)
+  const theme = {}
+  const props = {}
+  expect(dynamicStyles).toHaveBeenCalledWith(props, theme, context)
+})

@@ -1,14 +1,14 @@
-function evaluateGlamorStyles(styles, props, theme) {
+function evaluateGlamorStyles(styles, props, theme, context) {
   return styles.map(style => {
     if (typeof style === 'function') {
-      return style(props, theme)
+      return style(props, theme, context)
     }
     return style
   })
 }
 
-export default function getStyles(styles, props, styleOverrides, theme) {
-  const glamorStyles = evaluateGlamorStyles(styles, props, theme)
+function getStyles(styles, props, styleOverrides, theme, context) {
+  const glamorStyles = evaluateGlamorStyles(styles, props, theme, context)
   const outputStyles = glamorStyles
 
   if (styleOverrides && Object.keys(styleOverrides).length > 0) {
@@ -21,3 +21,5 @@ export default function getStyles(styles, props, styleOverrides, theme) {
 
   return outputStyles
 }
+
+export default getStyles
