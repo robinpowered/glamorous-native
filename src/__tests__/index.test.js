@@ -45,7 +45,7 @@ test('can use pre-glamorous components with style prop', () => {
       />,
     ).props(),
   ).toMatchObject({
-    style: [{flex: 1, flexDirection: 'column'}, {width: 200, marginLeft: 24}],
+    style: [{width: 200, marginLeft: 24}, {flex: 1, flexDirection: 'column'}],
   })
 })
 

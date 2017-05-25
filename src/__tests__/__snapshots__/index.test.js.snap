@@ -11,9 +11,6 @@ exports[`allows you to specify the tag rendered by a component 1`] = `
       Object {
         "width": 2,
       },
-      Object {
-        "width": 2,
-      },
     ]
   }
 />
@@ -45,19 +42,6 @@ exports[`merges composed component styles for reasonable overrides 1`] = `
         "marginBottom": 3,
         "marginLeft": 3,
       },
-      Array [
-        Object {
-          "marginLeft": 4,
-          "paddingTop": 4,
-        },
-        Object {
-          "paddingRight": 5,
-          "paddingTop": 5,
-        },
-        Object {
-          "paddingRight": 6,
-        },
-      ],
       Array [
         Object {
           "marginLeft": 4,

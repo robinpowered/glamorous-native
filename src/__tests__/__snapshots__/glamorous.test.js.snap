@@ -5,7 +5,7 @@ exports[`styles as properties should have highest priority 1`] = `
   style={
     Array [
       Object {
-        "backgroundColor": "blue",
+        "backgroundColor": "green",
       },
       Object {
         "backgroundColor": "blue",
