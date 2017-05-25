@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`styles as properties should have highest priority 1`] = `
+<View
+  style={
+    Array [
+      Object {
+        "backgroundColor": "blue",
+      },
+      Object {
+        "backgroundColor": "blue",
+      },
+    ]
+  }
+/>
+`;
