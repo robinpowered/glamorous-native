@@ -513,6 +513,41 @@ class SubTitle extends Component {
 
 > `withTheme` expects a `ThemeProvider` further up the render tree and will warn in `development` if one is not found!
 
+### Context
+
+[context](https://facebook.github.io/react/docs/context.html) is an unstable
+API and it's not recommended to use it directly. However, if you need to use it
+for some reason, here's an example of how you could do that:
+
+```jsx
+const dynamicStyles = (props, theme, context) => ({
+  color: context.isLoggedIn ? 'green' : 'red'
+})
+const MyText = glamorous.Text(dynamicStyles)
+MyText.contextTypes = {
+  isLoggedIn: PropTypes.string,
+}
+
+class Parent extends React.Component {
+  getChildContext() {
+    return {
+      isLoggedIn: true,
+    }
+  }
+  render() {
+    return <MyText>Greetings</MyText>
+  }
+}
+
+Parent.childContextTypes = {
+  isLoggedIn: PropTypes.string,
+}
+
+<Parent />
+// renders <Text />
+// with {color: 'green'}
+```
+
 ## Inspiration
 
 This package was inspired by the work from people's work on the following projects:
