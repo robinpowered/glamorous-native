@@ -523,7 +523,7 @@ for some reason, here's an example of how you could do that:
 const dynamicStyles = (props, theme, context) => ({
   color: context.isLoggedIn ? 'green' : 'red'
 })
-const MyText = glamorous.Text(dynamicStyles)
+const MyText = glamorous.text(dynamicStyles)
 MyText.contextTypes = {
   isLoggedIn: PropTypes.string,
 }
