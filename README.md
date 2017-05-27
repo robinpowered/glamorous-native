@@ -286,7 +286,7 @@ Let's see how that can be done in the examples below.
 We'll use this as our `GlamorousComponent`:
 
 ```js
-const MyStyledText = glamorous.view({marign: 1, fontSize: 1, padding: 1})
+const MyStyledText = glamorous.view({margin: 1, fontSize: 1, padding: 1})
 ```
 
 ###### using `style`
