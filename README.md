@@ -175,7 +175,7 @@ The `GlamorousComponent` is what is returned from the `glamorousComponentFactory
 
 ##### supported props
 
-By default `GlamorousComponent` supports two props: `style` and `theme` which ar used to override the styles of the component in different scenarios. For a more detailed explanation see [Overriding component styles](#overriding-component-styles) and [Theming](#theming) sections below.
+By default `GlamorousComponent` supports two props: `style` and `theme` which are used to override the styles of the component in different scenarios. For a more detailed explanation see [Overriding component styles](#overriding-component-styles) and [Theming](#theming) sections below.
 
 ##### `innerRef`
 
@@ -213,7 +213,7 @@ const dynamicStyles = props => ({fontSize: props.size === 'big' ? 32 : 24})
 const MyDynamicallyStyledText = glamorous.text(staticStyles, dynamicStyles)
 ```
 
-> The exception to this prop forwarding is the pre-created `GlamorousCOmponent`s (see below).
+> The exception to this prop forwarding is the pre-created `GlamorousComponent`s (see below).
 
 #### built-in GlamorousComponents
 
@@ -312,7 +312,7 @@ If we just want to extend the styles of an existing component, it can be done by
 
 ```js
 const MyComposedStyledText = glamorous(MyStyledText)({fontSize: 4, padding: 4})
-<MyStyledText />
+<MyComposedStyledText />
 // styles applied:
 // {marign: 1, fontSize: 4, padding: 4}
 ```
@@ -325,7 +325,7 @@ The `glamorous` function allows you to create your own `glamorousComponentFactor
 
 ```js
 const MyComponent = props => <Text {...props} />
-const myGlamorousComponentFacotry = glamorous(MyComponent)
+const myGlamorousComponentFactory = glamorous(MyComponent)
 const MyGlamorousComponent = myGlamorousComponentFactory({/* styles */})
 
 <MyGlamorousComponent numberOfLines={2} /* forwarded to the Text */ />
