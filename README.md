@@ -245,7 +245,7 @@ Having to name all of this stuff could be tedious, so having these pre-built com
 The `style` prop can be used to provide `StyleSheet` styles:
 
 ```js
-import glamorous, {withTheme} from 'glamorous'
+import glamorous, {withTheme} from 'glamorous-native'
 const {View, Text} = glamorous
 
 const predefinedStyle = StyleSheet.create({
