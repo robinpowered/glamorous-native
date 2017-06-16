@@ -314,7 +314,7 @@ If we just want to extend the styles of an existing component, it can be done by
 const MyComposedStyledText = glamorous(MyStyledText)({fontSize: 4, padding: 4})
 <MyComposedStyledText />
 // styles applied:
-// {marign: 1, fontSize: 4, padding: 4}
+// {margin: 1, fontSize: 4, padding: 4}
 ```
 
 In fact, the built-in React Native component factories provided are just an abstraction of this function, so `glamorous.view` could be written as `glamorous(View)` instead.
