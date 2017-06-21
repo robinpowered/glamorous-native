@@ -89,6 +89,21 @@ From here you can now import this module:
 import glamorous, {ThemeProvider} from 'glamorous-native'
 ```
 
+### Jest Configuration
+
+To use `glamorous-native` in Jest (such as with snapshot tests), you need to configure the `transformIgnorePatterns` configuration in your `package.json`. [More documentation about this can be found here](https://facebook.github.io/jest/docs/tutorial-react-native.html#transformignorepatterns-customization).
+
+```json
+{
+  "jest": {
+    "preset": "react-native",
+    "transformIgnorePatterns": [
+      "node_modules/(?!(jest-)?react-native|glamorous-native)"
+    ]
+  }
+}
+```
+
 ## Terms and concepts
 
 ### glamorous
