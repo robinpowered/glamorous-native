@@ -42,7 +42,6 @@
     "jest": "^20.0.1",
     "jest-enzyme": "^3.1.1",
     "jest-react-native": "^18.0.0",
-    "node-jsdom": "^3.1.5",
     "nps": "^5.1.0",
     "nps-utils": "^1.2.0",
     "react": "16.0.0-alpha.6",
