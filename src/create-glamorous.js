@@ -1,8 +1,8 @@
-import PropTypes from './react-compat';
-import React from 'react';
+import React from 'react'
 import {StyleSheet} from 'react-native'
 import {CHANNEL} from './constants'
 import getStyles from './get-styles'
+import PropTypes from './react-compat'
 
 function prepareStyles(styles) {
   return styles.filter(style => {

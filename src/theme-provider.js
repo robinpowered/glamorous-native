@@ -1,7 +1,7 @@
-import PropTypes from './react-compat';
-import React from 'react';
+import React from 'react'
 import brcast from 'brcast'
 import {CHANNEL} from './constants'
+import PropTypes from './react-compat'
 
 export default class ThemeProvider extends React.Component {
   static childContextTypes = {

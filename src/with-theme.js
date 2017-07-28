@@ -1,6 +1,6 @@
-import PropTypes from './react-compat';
-import React from 'react';
+import React from 'react'
 import {CHANNEL} from './constants'
+import PropTypes from './react-compat'
 
 function generateWarningMessage(componentName) {
   // eslint-disable-next-line max-len
