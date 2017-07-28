@@ -1,5 +1,7 @@
 /* eslint func-style:0, react/prop-types:0 */
-import React, {PropTypes} from 'react'
+import PropTypes from 'prop-types';
+
+import React from 'react';
 import {View} from 'react-native'
 import renderer from 'react-test-renderer'
 

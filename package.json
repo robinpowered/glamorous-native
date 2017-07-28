@@ -55,7 +55,8 @@
     "semantic-release": "^6.3.6"
   },
   "dependencies": {
-    "brcast": "^2.0.0"
+    "brcast": "^2.0.0",
+    "prop-types": "^15.5.10"
   },
   "eslintConfig": {
     "extends": [
