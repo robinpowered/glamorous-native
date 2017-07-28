@@ -1,4 +1,4 @@
-import PropTypes from 'prop-types';
+import PropTypes from './react-compat';
 import React from 'react';
 import {CHANNEL} from './constants'
 
