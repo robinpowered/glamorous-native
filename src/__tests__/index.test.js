@@ -1,6 +1,7 @@
 /* eslint func-style:0, react/prop-types:0 */
 import 'react-native-mock-render/mock' // eslint-disable-line
 import React from 'react'
+import PropTypes from 'prop-types'
 import {StyleSheet, View} from 'react-native'
 import renderer from 'react-test-renderer'
 import {shallow} from 'enzyme'
@@ -375,7 +376,7 @@ it('should accept user defined contextTypes', () => {
   const dynamicStyles = jest.fn()
   const Child = glamorous.view(dynamicStyles)
   Child.contextTypes = {
-    fontSize: React.PropTypes.number,
+    fontSize: PropTypes.number,
   }
 
   const context = {
