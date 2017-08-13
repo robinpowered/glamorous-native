@@ -336,7 +336,7 @@ In fact, the built-in React Native component factories provided are just an abst
 
 ### glamorous API
 
-The `glamorous` function allows you to create your own `glamorousComponentFactory` (see above)[#glamorouscomponentfactory] for any component you have. For example:
+The `glamorous` function allows you to create your own `glamorousComponentFactory` [see above](#glamorouscomponentfactory) for any component you have. For example:
 
 ```js
 const MyComponent = props => <Text {...props} />
