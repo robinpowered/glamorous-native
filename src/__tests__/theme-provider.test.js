@@ -4,12 +4,12 @@ import {shallow} from 'enzyme'
 import ThemeProvider from '../theme-provider'
 import glamorous from '../'
 
-test('renders a component with theme', () => {
+test('renders a component with theme from props', () => {
   const Comp = glamorous.view(
     {
       backgroundColor: 'red',
     },
-    (props, theme) => ({padding: theme.padding}),
+    props => ({padding: props.theme.padding}),
   )
 
   const wrapper = shallow(
@@ -20,7 +20,8 @@ test('renders a component with theme', () => {
 
   wrapper.instance().componentWillMount()
 
-  const compWrapper = wrapper.find(Comp)
+  const compWrapper = wrapper
+    .find(Comp)
     .shallow({context: wrapper.instance().getChildContext()})
 
   compWrapper.instance().componentWillMount()
@@ -49,7 +50,7 @@ test('theme properties updates get propagated down the tree', () => {
     {
       backgroundColor: 'red',
     },
-    (props, theme) => ({padding: theme.padding}),
+    props => ({padding: props.theme.padding}),
   )
 
   const wrapper = shallow(<Parent />)
@@ -58,7 +59,8 @@ test('theme properties updates get propagated down the tree', () => {
 
   themeWrapper.instance().componentWillMount()
 
-  const compWrapper = wrapper.find(Child)
+  const compWrapper = wrapper
+    .find(Child)
     .shallow({context: themeWrapper.instance().getChildContext()})
 
   compWrapper.instance().componentWillMount()
@@ -69,12 +71,12 @@ test('theme properties updates get propagated down the tree', () => {
 })
 
 test('merges nested themes', () => {
-  const One = glamorous.view({}, (props, {padding, margin}) => ({
+  const One = glamorous.view({}, ({theme: {padding, margin}}) => ({
     padding,
     margin,
   }))
 
-  const Two = glamorous.view({}, (props, {padding, margin}) => ({
+  const Two = glamorous.view({}, ({theme: {padding, margin}}) => ({
     padding,
     margin,
   }))
@@ -91,15 +93,18 @@ test('merges nested themes', () => {
   )
 
   wrapper.instance().componentWillMount()
-  const oneWrapper = wrapper.find(One)
+  const oneWrapper = wrapper
+    .find(One)
     .shallow({context: wrapper.instance().getChildContext()})
   oneWrapper.instance().componentWillMount()
 
-  const innerThemeWrapper = wrapper.find(ThemeProvider)
+  const innerThemeWrapper = wrapper
+    .find(ThemeProvider)
     .shallow({context: wrapper.instance().getChildContext()})
   innerThemeWrapper.instance().componentWillMount()
 
-  const twoWrapper = innerThemeWrapper.find(Two)
+  const twoWrapper = innerThemeWrapper
+    .find(Two)
     .shallow({context: innerThemeWrapper.instance().getChildContext()})
   twoWrapper.instance().componentWillMount()
 

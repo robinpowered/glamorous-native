@@ -17,9 +17,9 @@ test('should pass glam object prop', () => {
   const glam = {big: true}
   const theme = {color: 'blue'}
   expect(
-    renderer.create(
-      <Comp accessible={true} glam={glam} theme={theme} />,
-    ).toJSON(),
+    renderer
+      .create(<Comp accessible={true} glam={glam} theme={theme} />)
+      .toJSON(),
   ).toMatchSnapshot()
   expect(dynamicStyles).toHaveBeenCalledTimes(1)
   const props = {
@@ -28,5 +28,5 @@ test('should pass glam object prop', () => {
     theme, // this is just incidental because we have a theme prop
   }
   const context = expect.any(Object)
-  expect(dynamicStyles).toHaveBeenCalledWith(props, theme, context)
+  expect(dynamicStyles).toHaveBeenCalledWith(props, context)
 })
