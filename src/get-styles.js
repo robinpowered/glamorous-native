@@ -1,7 +1,7 @@
 function evaluateGlamorStyles(styles, props, theme, context) {
   return styles.map(style => {
     if (typeof style === 'function') {
-      return style(props, theme, context)
+      return style(Object.assign({}, props, {theme}), theme, context)
     }
     return style
   })

@@ -1,5 +1,5 @@
 /* eslint func-style:0, react/prop-types:0 */
-import 'react-native-mock-render/mock' // eslint-disable-line
+import 'react-native-mock-render/mock'; // eslint-disable-line
 import React from 'react'
 import PropTypes from 'prop-types'
 import {StyleSheet, View} from 'react-native'
@@ -25,12 +25,7 @@ test('sanity test', () => {
 
 test('can use pre-glamorous components with style attributes', () => {
   expect(
-    shallow(
-      <glamorous.View
-        flex={1}
-        flexDirection="column"
-      />,
-    ).props(),
+    shallow(<glamorous.View flex={1} flexDirection="column" />).props(),
   ).toMatchObject({
     style: [{flex: 1, flexDirection: 'column'}],
   })
@@ -46,7 +41,10 @@ test('can use pre-glamorous components with style prop', () => {
       />,
     ).props(),
   ).toMatchObject({
-    style: [{width: 200, marginLeft: 24}, {flex: 1, flexDirection: 'column'}],
+    style: [
+      {width: 200, marginLeft: 24},
+      {flex: 1, flexDirection: 'column'},
+    ],
   })
 })
 
@@ -77,18 +75,18 @@ test('merges composed component styles for reasonable overrides', () => {
   })
 
   const wrapper = shallow(
-    <Grandchild
-      style={[otherStyles1, otherStyles2, {paddingRight: 6}]}
-    />,
+    <Grandchild style={[otherStyles1, otherStyles2, {paddingRight: 6}]} />,
   )
 
   const computedStyles = StyleSheet.flatten(wrapper.props().style)
 
-  expect(renderer.create(
-    <Grandchild
-      style={[otherStyles1, otherStyles2, {paddingRight: 6}]}
-    />,
-  ).toJSON()).toMatchSnapshot()
+  expect(
+    renderer
+      .create(
+        <Grandchild style={[otherStyles1, otherStyles2, {paddingRight: 6}]} />,
+      )
+      .toJSON(),
+  ).toMatchSnapshot()
 
   expect(computedStyles).toMatchObject({
     marginTop: 1,
@@ -154,9 +152,15 @@ test('allows you to specify the tag rendered by a component', () => {
     width: 1,
   })
   expect(
-    renderer.create(
-      <MyStyledViewComponent height={2} noForward={true} style={{width: 2}} />,
-    ).toJSON(),
+    renderer
+      .create(
+        <MyStyledViewComponent
+          height={2}
+          noForward={true}
+          style={{width: 2}}
+        />,
+      )
+      .toJSON(),
   ).toMatchSnapshot()
 })
 
@@ -237,7 +241,7 @@ test('renders a component with theme properties', () => {
     {
       backgroundColor: 'red',
     },
-    (props, theme) => ({padding: theme.padding}),
+    ({theme}) => ({padding: theme.padding}),
   )
   expect(
     renderer.create(<Comp theme={{padding: '10px'}} />).toJSON(),
@@ -292,7 +296,7 @@ test('passes an updated theme when theme prop changes', () => {
     {
       backgroundColor: 'red',
     },
-    (props, theme) => ({padding: theme.padding}),
+    ({theme}) => ({padding: theme.padding}),
   )
   const wrapper = shallow(<Comp theme={{padding: 10}} />)
   expect(wrapper.props()).toMatchObject({
@@ -386,6 +390,6 @@ it('should accept user defined contextTypes', () => {
   shallow(<Child />, {context})
   expect(dynamicStyles).toHaveBeenCalledTimes(1)
   const theme = {}
-  const props = {}
+  const props = {theme}
   expect(dynamicStyles).toHaveBeenCalledWith(props, theme, context)
 })
