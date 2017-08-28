@@ -391,5 +391,5 @@ it('should accept user defined contextTypes', () => {
   expect(dynamicStyles).toHaveBeenCalledTimes(1)
   const theme = {}
   const props = {theme}
-  expect(dynamicStyles).toHaveBeenCalledWith(props, theme, context)
+  expect(dynamicStyles).toHaveBeenCalledWith(props, context)
 })

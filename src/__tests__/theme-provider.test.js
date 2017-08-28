@@ -4,34 +4,6 @@ import {shallow} from 'enzyme'
 import ThemeProvider from '../theme-provider'
 import glamorous from '../'
 
-// this test left to validate changes don't break contract
-test('renders a component with theme', () => {
-  const Comp = glamorous.view(
-    {
-      backgroundColor: 'red',
-    },
-    (props, theme) => ({padding: theme.padding}),
-  )
-
-  const wrapper = shallow(
-    <ThemeProvider theme={{padding: 10}}>
-      <Comp />
-    </ThemeProvider>,
-  )
-
-  wrapper.instance().componentWillMount()
-
-  const compWrapper = wrapper
-    .find(Comp)
-    .shallow({context: wrapper.instance().getChildContext()})
-
-  compWrapper.instance().componentWillMount()
-
-  expect(compWrapper.props()).toMatchObject({
-    style: [{backgroundColor: 'red'}, {padding: 10}],
-  })
-})
-
 test('renders a component with theme from props', () => {
   const Comp = glamorous.view(
     {
