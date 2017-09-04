@@ -24,7 +24,13 @@ import {
 import { StyleFunction, StyleArray, StyleArgument } from './style-arguments'
 
 import { Omit } from './helpers'
-import { ScrollViewStyle, TextStyle, ViewStyle, ImageStyle } from 'react-native'
+import {
+  ScrollViewStyle,
+  TextStyle,
+  ViewStyle,
+  ImageStyle,
+  StyleProp,
+} from 'react-native'
 
 export {
   GlamorousComponent,
@@ -93,7 +99,7 @@ export interface GlamorousInterface
   extends NativeComponentFactory,
     NativeComponent {
   <
-    ExternalProps extends { style?: AllStyles },
+    ExternalProps extends { style?: StyleProp<AllStyles> },
     StyleType = ExternalProps['style'],
     Context = object,
     DefaultProps extends object = object
