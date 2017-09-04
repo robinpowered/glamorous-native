@@ -93,8 +93,8 @@ export interface GlamorousInterface
   extends NativeComponentFactory,
     NativeComponent {
   <
-    ExternalProps,
-    StyleType,
+    ExternalProps extends { style?: AllStyles },
+    StyleType = ExternalProps['style'],
     Context = object,
     DefaultProps extends object = object
   >(
