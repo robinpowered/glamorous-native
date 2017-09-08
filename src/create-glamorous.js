@@ -97,9 +97,13 @@ export default function createGlamorous(splitProps) {
             this.context,
           )
 
+          const isStatelessFunction =
+            typeof GlamorousComponent.comp === 'function' &&
+            !GlamorousComponent.comp.prototype.render
+
           return React.createElement(GlamorousComponent.comp, {
             ...toForward,
-            ref: this.onRef,
+            ref: isStatelessFunction ? undefined : this.onRef,
             style: fullStyles.length > 0 ? fullStyles : null,
           })
         }
