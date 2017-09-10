@@ -14,10 +14,10 @@ export interface BuiltInGlamorousComponentFactory<ElementProps, Properties> {
 
   <Props extends { theme: any }>(
     ...styles: StyleArgument<Properties, Props>[]
-  ): GlamorousComponent<ElementProps & Omit<Props, 'theme'>, Props>
+  ): GlamorousComponent<Omit<Props, 'theme'> & ElementProps, Props>
 
   <Props>(...styles: StyleArgument<Properties, Props>[]): GlamorousComponent<
-    ElementProps & Props,
+    Props & ElementProps,
     Props
   >
 }
