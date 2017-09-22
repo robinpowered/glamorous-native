@@ -78,7 +78,7 @@ export default function createGlamorous(splitProps) {
         }
 
         render() {
-          const props = this.props
+          const {children, ...props} = this.props
 
           const {toForward, styleOverrides} = splitProps(
             props,
@@ -101,17 +101,22 @@ export default function createGlamorous(splitProps) {
             typeof GlamorousComponent.comp === 'function' &&
             !GlamorousComponent.comp.prototype.render
 
-          return React.createElement(GlamorousComponent.comp, {
-            ...toForward,
-            ref: isStatelessFunction ? undefined : this.onRef,
-            style: fullStyles.length > 0 ? fullStyles : null,
-          })
+          return React.createElement(
+            GlamorousComponent.comp,
+            {
+              ...toForward,
+              ref: isStatelessFunction ? undefined : this.onRef,
+              style: fullStyles.length > 0 ? fullStyles : null,
+            },
+            children,
+          )
         }
       }
 
       GlamorousComponent.comp = comp
 
       GlamorousComponent.propTypes = {
+        children: PropTypes.node,
         innerRef: PropTypes.func,
         theme: PropTypes.object,
       }
