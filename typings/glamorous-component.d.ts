@@ -13,20 +13,6 @@ export interface ExtraGlamorousProps {
   theme?: object
 }
 
-export interface WithComponent<ExternalProps, Props> {
-  withComponent: (
-    component: string | Component<Props>
-  ) => GlamorousComponent<ExternalProps, Props>
-}
-
-export interface WithProps<ExternalProps, Props> {
-  withProps: <DefaultProps extends object>(
-    props: DefaultProps
-  ) => GlamorousComponent<ExternalProps & Partial<DefaultProps>, Props>
-}
-
 export type GlamorousComponent<ExternalProps, Props> = React.ComponentClass<
   ExtraGlamorousProps & ExternalProps
-> &
-  WithComponent<ExternalProps, Props> &
-  WithProps<ExternalProps, Props>
+>
