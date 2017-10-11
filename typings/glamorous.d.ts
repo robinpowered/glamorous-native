@@ -8,12 +8,7 @@ import {
   NativeComponentFactory,
   ComponentKey,
 } from './built-in-component-factories'
-import {
-  GlamorousComponent,
-  ExtraGlamorousProps,
-  WithComponent,
-  WithProps,
-} from './glamorous-component'
+import { GlamorousComponent, ExtraGlamorousProps } from './glamorous-component'
 import {
   BuiltInGlamorousComponentFactory,
   KeyGlamorousComponentFactory,
@@ -35,8 +30,6 @@ import {
 export {
   GlamorousComponent,
   ExtraGlamorousProps,
-  WithComponent,
-  WithProps,
   StyleFunction,
   StyleArray,
   StyleArgument,
