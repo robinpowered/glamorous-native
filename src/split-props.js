@@ -1,7 +1,11 @@
 import isStyleProp from './is-style-prop'
 
+function isForwardPropertyRootElement(rootEl) {
+  return typeof rootEl !== 'string' || rootEl === 'RCTView'
+}
+
 function shouldForwardProperty(rootEl, propName) {
-  return typeof rootEl !== 'string' && !isStyleProp(rootEl, propName)
+  return isForwardPropertyRootElement(rootEl) && !isStyleProp(rootEl, propName)
 }
 
 export default function splitProps({
@@ -14,7 +18,7 @@ export default function splitProps({
   const returnValue = {toForward: {}, styleOverrides}
 
   if (!propsAreStyleOverrides) {
-    if (typeof rootEl !== 'string') {
+    if (isForwardPropertyRootElement(rootEl)) {
       returnValue.toForward = rest
       return returnValue
     }
