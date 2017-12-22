@@ -462,7 +462,7 @@ const Title = glamorous.text({
 </ThemeProvider>
 ```
 
-`glamorous-native` also epxorts a `withTheme` higher order component (HOC) so you can access your theme in any component!
+`glamorous-native` also exports a `withTheme` higher order component (HOC) so you can access your theme in any component!
 
 ```jsx
 import glamorous, {ThemeProvider, withTheme} from 'glamorous-native'
