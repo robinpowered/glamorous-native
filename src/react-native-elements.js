@@ -11,6 +11,7 @@ import {
   TouchableOpacity,
   TouchableWithoutFeedback,
   View,
+  ImageBackground
 } from 'react-native'
 
 export const ReactNativeElementMap = {
@@ -24,6 +25,7 @@ export const ReactNativeElementMap = {
   TouchableOpacity,
   TouchableWithoutFeedback,
   View,
+  ImageBackground
 }
 
 // Gracefully append new components that may not be supported
