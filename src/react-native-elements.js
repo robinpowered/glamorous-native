@@ -25,7 +25,6 @@ export const ReactNativeElementMap = {
   TouchableOpacity,
   TouchableWithoutFeedback,
   View,
-  ImageBackground,
 }
 
 // Gracefully append new components that may not be supported
@@ -36,6 +35,10 @@ if (FlatList) {
 
 if (SectionList) {
   ReactNativeElementMap.SectionList = SectionList
+}
+
+if (ImageBackground) {
+  ReactNativeElementMap.ImageBackground = ImageBackground
 }
 
 export default Object.keys(ReactNativeElementMap)
