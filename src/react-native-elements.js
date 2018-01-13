@@ -11,6 +11,7 @@ import {
   TouchableOpacity,
   TouchableWithoutFeedback,
   View,
+  ImageBackground,
 } from 'react-native'
 
 export const ReactNativeElementMap = {
@@ -34,6 +35,10 @@ if (FlatList) {
 
 if (SectionList) {
   ReactNativeElementMap.SectionList = SectionList
+}
+
+if (ImageBackground) {
+  ReactNativeElementMap.ImageBackground = ImageBackground
 }
 
 export default Object.keys(ReactNativeElementMap)
