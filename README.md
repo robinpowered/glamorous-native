@@ -413,7 +413,7 @@ const MyStyledComponent = glamorous(MyComponent, {
 
 #### propsAreStyleOverrides
 
-This allows you to use props as styles. When it's set to true, props will be added to the component's style object, taking precedence over existing values. Pre-built components like `glamorous.text` use this option by default.
+This allows you to use props as styles. When it's set to true, props will be added to the component's style object, taking precedence over existing values. Pre-built components like `glamorous.Text` use this option by default.
 
 ```js
 const GreenText = glamorous(
