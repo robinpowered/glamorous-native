@@ -401,7 +401,7 @@ const MyStyledComponent = glamorous(MyComponent, {
   fontSize: props.big ? 36 : 24
 }))
 <MyStyledComponent shouldRender={true} big={false} numberOfLines={1} />
-// this will render:
+// This will render:
 // <Text numberOfLines={1} />
 // with {fontSize: 24}
 // `shouldRender` will be forwarded to `MyComponent` because it is included in
@@ -409,6 +409,27 @@ const MyStyledComponent = glamorous(MyComponent, {
 // is a `Text` and that's not a valid prop for a `Text`, but it will be used in
 // the styles object function that determines the `fontSize`. Finally `numberOfLines`
 // will be forwarded to `MyComponent` because it is a valid prop for a `Text`
+```
+
+#### propsAreStyleOverrides
+
+This allows you to use props as styles. When it's set to true, props will be added to the component's style object, taking precedence over existing values. Pre-built components like `glamorous.text` use this option by default.
+
+```js
+const GreenText = glamorous(
+  Text,
+  {propsAreStyleOverrides: true}
+)({
+  color: 'green'
+})
+
+<GreenText fontSize={30} selectable={true} />
+// This will render:
+// <Text selectable={true} />
+// with {color: 'green', fontSize: 30}
+// the selectable prop is passed to the underlying
+// Text component because glamorous recognizes that
+// it's not a valid style property
 ```
 
 ### Theming
