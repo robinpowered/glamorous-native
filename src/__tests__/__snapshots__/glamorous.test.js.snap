@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`propsAreStyleOverrides should add style props to the style object 1`] = `
+<View
+  nonStyleProp={true}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "green",
+      },
+    ]
+  }
+/>
+`;
+
 exports[`styles as properties should have highest priority 1`] = `
 <View
   style={

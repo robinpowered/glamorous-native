@@ -109,3 +109,16 @@ it('styles as properties should have highest priority', () => {
     />,
   ).toJSON()).toMatchSnapshot()
 })
+
+describe('propsAreStyleOverrides', () => {
+  it('should add style props to the style object', () => {
+    const StyledView = glamorous(View, {
+      propsAreStyleOverrides: true,
+    })()
+    expect(
+      renderer.create(
+        <StyledView backgroundColor="green" nonStyleProp={true} />,
+      ).toJSON(),
+    ).toMatchSnapshot()
+  })
+})

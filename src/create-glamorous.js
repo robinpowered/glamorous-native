@@ -20,10 +20,12 @@ function prepareStyles(styles) {
 }
 
 export default function createGlamorous(splitProps) {
-  return function glamorous(
-    comp,
-    {rootEl, displayName, forwardProps = []} = {},
-  ) {
+  return function glamorous(comp, {
+      rootEl,
+      displayName,
+      forwardProps = [],
+      propsAreStyleOverrides = comp.propsAreStyleOverrides,
+    } = {}) {
     return glamorousComponentFactory
 
     function glamorousComponentFactory(...unpreparedStyles) {
@@ -155,6 +157,7 @@ export default function createGlamorous(splitProps) {
           rootEl,
           forwardProps,
           displayName,
+          propsAreStyleOverrides,
         }),
       )
 
@@ -169,6 +172,7 @@ function getGlamorousComponentMetadata({
   rootEl,
   forwardProps,
   displayName,
+  propsAreStyleOverrides,
 }) {
   const componentsComp = comp.comp ? comp.comp : comp
 
@@ -178,6 +182,7 @@ function getGlamorousComponentMetadata({
     rootEl: rootEl || componentsComp,
     forwardProps: when(comp.forwardProps, forwardProps),
     displayName: displayName || `glamorous(${getDisplayName(comp)})`,
+    propsAreStyleOverrides,
   }
 }
 
