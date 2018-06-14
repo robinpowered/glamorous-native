@@ -2,7 +2,6 @@ import { ExtraGlamorousProps } from './glamorous-component'
 
 import {
   ViewProperties,
-  ScrollViewStyle,
   TextStyle,
   ViewStyle,
   ImageStyle,
@@ -27,7 +26,7 @@ export interface NativeComponent {
     ListViewProperties & ExtraGlamorousProps & ViewStyle
   >
   ScrollView: React.StatelessComponent<
-    ScrollViewProps & ExtraGlamorousProps & ScrollViewStyle
+    ScrollViewProps & ExtraGlamorousProps & ViewStyle
   >
   Text: React.StatelessComponent<
     TextProperties & ExtraGlamorousProps & TextStyle

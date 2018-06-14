@@ -20,7 +20,6 @@ import { StyleFunction, StyleArray, StyleArgument } from './style-arguments'
 
 import { Omit } from './helpers'
 import {
-  ScrollViewStyle,
   TextStyle,
   ViewStyle,
   ImageStyle,
@@ -86,7 +85,7 @@ type OmitInternals<Props extends GlamorousProps> = Omit<
 
 type GlamorousProps = { theme?: object }
 
-type AllStyles = ScrollViewStyle | TextStyle | ViewStyle | ImageStyle
+type AllStyles = TextStyle | ViewStyle | ImageStyle
 
 export interface GlamorousInterface
   extends NativeComponentFactory,
