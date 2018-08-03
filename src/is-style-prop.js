@@ -23,6 +23,7 @@ const textStyleProps = Object.keys(TextStylePropTypes)
 const viewStyleComponents = [
   Animated.Image,
   Animated.View,
+  Animated.ScrollView,
   FlatList,
   Image,
   ListView,
