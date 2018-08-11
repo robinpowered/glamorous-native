@@ -7,6 +7,7 @@ import renderer from 'react-test-renderer'
 import withTheme from '../with-theme'
 import ThemeProvider from '../theme-provider'
 import {CHANNEL} from '../constants'
+import {mount, shallow} from 'enzyme'
 
 const getMockedContext = unsubscribe => ({ // eslint-disable-line no-unused-vars
   [CHANNEL]: {
@@ -29,10 +30,12 @@ test('renders a non-glamorous component with theme', () => {
   ).toMatchSnapshot()
 })
 
-// @TODO - cant mount
-/*
 test('theme properties updates get propagated down the tree', () => {
-  class Parent extends Component {
+  class Comp extends React.Component {
+    render() { return <div {...this.props} /> }
+  }
+  const Child = withTheme(({theme: {padding}}) => <Comp style={{padding}} />)
+  class Parent extends React.Component {
     state = {
       padding: 10,
     }
@@ -46,13 +49,12 @@ test('theme properties updates get propagated down the tree', () => {
     }
   }
 
-  const Child = withTheme(({theme: {padding}}) => <div style={{padding}} />)
   const wrapper = mount(<Parent />)
-  expect(wrapper).toMatchSnapshot(`with theme prop of padding 10px`)
+  const comp = wrapper.find(Comp)
+  expect(comp.prop('style').padding).toBe(10)
   wrapper.setState({padding: 20})
-  expect(wrapper).toMatchSnapshot(`with theme prop of padding 20px`)
+  expect(comp.prop('style').padding).toBe(20)
 })
-*/
 
 test('works properly with classes', () => {
   /* eslint-disable react/prefer-stateless-function */

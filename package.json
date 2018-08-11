@@ -17,14 +17,18 @@
     "css-in-js",
     "cssinjs"
   ],
-  "author":
-    "Atticus White <atticus@robinpowered.com> (https://robinpowered.com/)",
+  "author": "Atticus White <atticus@robinpowered.com> (https://robinpowered.com/)",
   "license": "MIT",
   "jest": {
     "preset": "jest-react-native",
     "coverageDirectory": "./coverage/",
     "collectCoverage": true,
-    "testPathIgnorePatterns": ["/node_modules/", "/examples/"]
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/examples/",
+      "<rootDir>/src/__tests__/setup.js"
+    ],
+    "setupTestFrameworkScriptFile": "<rootDir>/src/__tests__/setup.js"
   },
   "peerDependencies": {
     "react": ">=0.14.5 || >=16.0.0-alpha.6",
@@ -41,6 +45,7 @@
     "jest": "^20.0.1",
     "jest-enzyme": "^3.1.1",
     "jest-react-native": "^18.0.0",
+    "jsdom": "9.12.0",
     "nps": "^5.1.0",
     "nps-utils": "^1.2.0",
     "prop-types": "^15.5.10",
