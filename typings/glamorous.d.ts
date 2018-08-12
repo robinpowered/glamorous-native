@@ -116,7 +116,7 @@ export class ThemeProvider extends React.Component<ThemeProps, any> {}
 
 export function withTheme<Props extends { theme: any }>(
   component: React.ComponentClass<Props>
-): React.ComponentClass<Omit<Props, 'theme'>>
+): React.ComponentClass<Omit<Props, 'theme'> & { innerRef?: React.Ref<React.Component<Props> | null> }>
 
 export function withTheme<Props extends { theme: any }>(
   component: React.StatelessComponent<Props>

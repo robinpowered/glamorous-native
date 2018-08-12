@@ -43,8 +43,13 @@ export default function withTheme(ComponentToTheme) {
     }
 
     render() {
-      return <ComponentToTheme {...this.props} {...this.state} />
+      const { innerRef, ...rest } = this.props
+      return <ComponentToTheme ref={innerRef} {...rest} {...this.state} />
     }
+  }
+
+  ThemedComponent.defaultProps = {
+    innerRef: function(ref) {}
   }
 
   ThemedComponent.contextTypes = {

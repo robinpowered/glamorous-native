@@ -111,6 +111,27 @@ test('pass through when no theme provider found up tree', () => {
   console.warn = originalWarn
 })
 
+test('render with innerRef props', () => {
+  class Child extends React.Component {
+    render() {
+      return <View />
+    }
+  }
+  Child.propTypes = {
+    theme: PropTypes.object,
+  }
+  const ChildWithTheme = withTheme(Child)
+  const innerRef = jest.fn()
+  class Parent extends React.Component {
+    render() {
+      return <ChildWithTheme innerRef={innerRef} />
+    }
+  }
+  const wrapper = mount(<Parent />)
+  const child = wrapper.find(Child).getNode()
+  expect(innerRef).toHaveBeenCalledWith(child)
+})
+
 //@TODO - cant mount
 /*
 test('does not warn when NODE_ENV is set to `production`', () => {
