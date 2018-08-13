@@ -4,10 +4,10 @@ import PropTypes from 'prop-types'
 import {View} from 'react-native'
 import renderer from 'react-test-renderer'
 
+import {mount} from 'enzyme'
 import withTheme from '../with-theme'
 import ThemeProvider from '../theme-provider'
 import {CHANNEL} from '../constants'
-import {mount, shallow} from 'enzyme'
 
 const getMockedContext = unsubscribe => ({ // eslint-disable-line no-unused-vars
   [CHANNEL]: {
@@ -31,9 +31,7 @@ test('renders a non-glamorous component with theme', () => {
 })
 
 test('theme properties updates get propagated down the tree', () => {
-  class Comp extends React.Component {
-    render() { return <div {...this.props} /> }
-  }
+  const Comp = props => <div {...props} />
   const Child = withTheme(({theme: {padding}}) => <Comp style={{padding}} />)
   class Parent extends React.Component {
     state = {
@@ -116,9 +114,6 @@ test('render with innerRef props', () => {
     render() {
       return <View />
     }
-  }
-  Child.propTypes = {
-    theme: PropTypes.object,
   }
   const ChildWithTheme = withTheme(Child)
   const innerRef = jest.fn()
