@@ -114,8 +114,8 @@ interface ThemeProps {
 
 export class ThemeProvider extends React.Component<ThemeProps, any> {}
 
-export function withTheme<Props extends { theme: any }>(
-  component: React.ComponentClass<Props>
+export function withTheme<Props extends { theme: any }, State>(
+  component: React.ComponentClass<Props, State>
 ): React.ComponentClass<Omit<Props, 'theme'> & { innerRef?: React.Ref<React.Component<Props> | null> }>
 
 export function withTheme<Props extends { theme: any }>(

@@ -23,6 +23,10 @@ export default function withTheme(ComponentToTheme) {
                 'Stateless Function',
             ),
           )
+
+          if (!!this.props.innerRef && !ComponentToTheme.prototype.isReactComponent) {
+            console.warn('innerRef won\'t work on stateless component')
+          }
         }
 
         return
@@ -44,7 +48,10 @@ export default function withTheme(ComponentToTheme) {
 
     render() {
       const {innerRef, ...rest} = this.props
-      return <ComponentToTheme ref={innerRef} {...rest} {...this.state} />
+      if (!!ComponentToTheme.prototype.isReactComponent) {
+        return <ComponentToTheme ref={innerRef} {...rest} {...this.state} />
+      }
+      return <ComponentToTheme {...rest} {...this.state} />
     }
   }
 
