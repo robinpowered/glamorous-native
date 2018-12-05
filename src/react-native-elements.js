@@ -42,3 +42,5 @@ if (ImageBackground) {
 }
 
 export default Object.keys(ReactNativeElementMap)
+
+export const elementConstructors = Object.values(ReactNativeElementMap)

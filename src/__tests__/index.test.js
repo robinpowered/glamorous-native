@@ -147,7 +147,7 @@ test('allows you to specify a displayName', () => {
 
 test('allows you to specify the tag rendered by a component', () => {
   const MyViewComponent = props => <View {...props} />
-  const MyStyledViewComponent = glamorous(MyViewComponent, {rootEl: 'view'})({
+  const MyStyledViewComponent = glamorous(MyViewComponent, {rootEl: View})({
     height: 1,
     width: 1,
   })

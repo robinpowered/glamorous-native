@@ -2,7 +2,6 @@
 
 exports[`propsAreStyleOverrides should add style props to the style object 1`] = `
 <View
-  nonStyleProp={true}
   style={
     Array [
       Object {

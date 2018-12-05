@@ -77,7 +77,6 @@ exports[`renders a component with theme properties 1`] = `
 
 exports[`styles can be functions that accept props 1`] = `
 <View
-  margin={2}
   style={
     Array [
       Object {

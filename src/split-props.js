@@ -1,24 +1,29 @@
 import isStyleProp from './is-style-prop'
+import isReactNativeProp from './is-react-native-prop'
+import {elementConstructors} from './react-native-elements'
 
-function isForwardPropertyRootElement(rootEl) {
-  return typeof rootEl !== 'string' || rootEl === 'RCTView'
+function isReactNativeElement(rootEl) {
+  return elementConstructors.indexOf(rootEl) !== -1 || rootEl === 'RCTView'
 }
 
 function shouldForwardProperty(rootEl, propName) {
-  return isForwardPropertyRootElement(rootEl) && !isStyleProp(rootEl, propName)
+  return (
+    isReactNativeElement(rootEl) &&
+    isReactNativeProp(rootEl, propName) &&
+    !isStyleProp(rootEl, propName)
+  )
 }
 
-export default function splitProps({
-  theme,
-  innerRef,
-  glam,
-  ...rest
-}, {propsAreStyleOverrides, rootEl, forwardProps}) {
+export default function splitProps(
+  {theme, innerRef, glam, ...rest},
+  {propsAreStyleOverrides, rootEl, forwardProps},
+) {
   const styleOverrides = {}
   const returnValue = {toForward: {}, styleOverrides}
 
   if (!propsAreStyleOverrides) {
-    if (isForwardPropertyRootElement(rootEl)) {
+    // Forward everything to non-builtin components
+    if (!isReactNativeElement(rootEl)) {
       returnValue.toForward = rest
       return returnValue
     }
@@ -30,7 +35,7 @@ export default function splitProps({
       shouldForwardProperty(rootEl, propName)
     ) {
       split.toForward[propName] = rest[propName]
-    } else if (propsAreStyleOverrides) {
+    } else if (propsAreStyleOverrides && isStyleProp(rootEl, propName)) {
       split.styleOverrides[propName] = rest[propName]
     }
     return split
