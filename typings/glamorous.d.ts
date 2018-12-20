@@ -44,7 +44,7 @@ export {
 
 export interface GlamorousOptions<Props, Context, DefaultProps> {
   displayName: string
-  rootEl: string | Element
+  rootEl: string | ComponentType<any>
   forwardProps: String[]
   shouldClassNameUpdate: (
     props: Props,
@@ -62,7 +62,7 @@ export interface PropsAreCssOverridesGlamorousOptions<
   DefaultProps
 > {
   displayName?: string
-  rootEl?: string | Element
+  rootEl?: string | ComponentType<any>
   forwardProps?: String[]
   shouldClassNameUpdate?: (
     props: Props,
