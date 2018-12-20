@@ -1,6 +1,6 @@
 {
   "name": "glamorous-native",
-  "version": "1.4.0",
+  "version": "1.4.1",
   "description": "React glamorous library for React Native",
   "main": "src/index.js",
   "types": "./typings/glamorous.d.ts",
