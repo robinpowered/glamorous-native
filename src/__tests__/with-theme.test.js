@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 import {View} from 'react-native'
 import renderer from 'react-test-renderer'
 
+import {mount} from 'enzyme'
 import withTheme from '../with-theme'
 import ThemeProvider from '../theme-provider'
 import {CHANNEL} from '../constants'
@@ -29,10 +30,10 @@ test('renders a non-glamorous component with theme', () => {
   ).toMatchSnapshot()
 })
 
-// @TODO - cant mount
-/*
 test('theme properties updates get propagated down the tree', () => {
-  class Parent extends Component {
+  const Comp = props => <div {...props} />
+  const Child = withTheme(({theme: {padding}}) => <Comp style={{padding}} />)
+  class Parent extends React.Component {
     state = {
       padding: 10,
     }
@@ -46,13 +47,12 @@ test('theme properties updates get propagated down the tree', () => {
     }
   }
 
-  const Child = withTheme(({theme: {padding}}) => <div style={{padding}} />)
   const wrapper = mount(<Parent />)
-  expect(wrapper).toMatchSnapshot(`with theme prop of padding 10px`)
+  const comp = wrapper.find(Comp)
+  expect(comp.prop('style').padding).toBe(10)
   wrapper.setState({padding: 20})
-  expect(wrapper).toMatchSnapshot(`with theme prop of padding 20px`)
+  expect(comp.prop('style').padding).toBe(20)
 })
-*/
 
 test('works properly with classes', () => {
   /* eslint-disable react/prefer-stateless-function */
@@ -107,6 +107,24 @@ test('pass through when no theme provider found up tree', () => {
   // )
   /* eslint-enable */
   console.warn = originalWarn
+})
+
+test('render with innerRef props', () => {
+  class Child extends React.Component {
+    render() {
+      return <View />
+    }
+  }
+  const ChildWithTheme = withTheme(Child)
+  const innerRef = jest.fn()
+  class Parent extends React.Component {
+    render() {
+      return <ChildWithTheme innerRef={innerRef} />
+    }
+  }
+  const wrapper = mount(<Parent />)
+  const child = wrapper.find(Child).getNode()
+  expect(innerRef).toHaveBeenCalledWith(child)
 })
 
 //@TODO - cant mount
