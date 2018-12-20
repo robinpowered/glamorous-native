@@ -18,6 +18,7 @@ import {viewStyleProps, textStyleProps} from './style-props'
 const viewStyleComponents = [
   Animated.Image,
   Animated.View,
+  Animated.ScrollView,
   FlatList,
   Image,
   ListView,
