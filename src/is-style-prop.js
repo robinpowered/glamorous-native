@@ -13,12 +13,7 @@ import {
   TouchableWithoutFeedback,
   View,
 } from 'react-native'
-// eslint-disable-next-line max-len
-import ViewStylePropTypes from 'react-native/Libraries/Components/View/ViewStylePropTypes'
-import TextStylePropTypes from 'react-native/Libraries/Text/TextStylePropTypes'
-
-const viewStyleProps = Object.keys(ViewStylePropTypes)
-const textStyleProps = Object.keys(TextStylePropTypes)
+import {viewStyleProps, textStyleProps} from './style-props'
 
 const viewStyleComponents = [
   Animated.Image,
