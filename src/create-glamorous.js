@@ -72,11 +72,27 @@ export default function createGlamorous(splitProps) {
           }
         }
 
-        onRef(innerComponent) {
+        onRef = innerComponent => {
           this.innerComponent = innerComponent
-          if (this.props.innerRef) {
-            this.props.innerRef(innerComponent)
+          this.props.innerRef(innerComponent)
+        }
+
+        forwardedRef = () => {
+          const {innerRef} = this.props
+
+          const isStatelessFunction =
+          typeof GlamorousComponent.comp === 'function' &&
+          !GlamorousComponent.comp.prototype.render
+
+          if (!isStatelessFunction) {
+            if (innerRef && typeof innerRef === 'function') {
+              return this.onRef
+            }
+            if (innerRef && typeof innerRef === 'object') {
+              return innerRef
+            }
           }
+          return undefined
         }
 
         render() {
@@ -99,15 +115,12 @@ export default function createGlamorous(splitProps) {
             this.context,
           )
 
-          const isStatelessFunction =
-            typeof GlamorousComponent.comp === 'function' &&
-            !GlamorousComponent.comp.prototype.render
-
+        
           return React.createElement(
             GlamorousComponent.comp,
             {
               ...toForward,
-              ref: isStatelessFunction ? undefined : this.onRef,
+              ref: this.forwardedRef(),
               style: fullStyles.length > 0 ? fullStyles : null,
             },
             children,
@@ -119,7 +132,7 @@ export default function createGlamorous(splitProps) {
 
       GlamorousComponent.propTypes = {
         children: PropTypes.node,
-        innerRef: PropTypes.func,
+        innerRef: PropTypes.oneOfType([PropTypes.func, PropTypes.object]),
         theme: PropTypes.object,
       }
 

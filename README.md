@@ -212,6 +212,28 @@ class MyComponent extends React.Component {
 }
 ```
 
+innerRef also supports the new [React.createRef()](https://reactjs.org/docs/refs-and-the-dom.html#creating-refs) api
+
+```js
+const MyView = glamorous.view({padding: 20})
+
+// You can get a reference to the inner element with the `innerRef` prop
+
+class MyComponent extends React.Component {
+  constructor(props) {
+    super(props);
+    this.myRef = React.createRef();
+  }
+  render() {
+    return () {
+      return (
+        <MyView innerRef={this.myRef} />
+      )
+    }
+  }
+}
+```
+
 ##### other props
 
 Only props that are safe to forward to the specific element (ie. that will ultimately be rendered) will be forwarded. So this is totally legit:

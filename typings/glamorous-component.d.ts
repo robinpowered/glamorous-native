@@ -1,6 +1,6 @@
-import { Component } from './glamorous'
+import {Component} from './glamorous'
 
-import { Omit } from './helpers'
+import {Omit} from './helpers'
 
 /**
 * `glamorousComponentFactory` returns a ComponentClass
@@ -9,7 +9,7 @@ import { Omit } from './helpers'
 */
 
 export interface ExtraGlamorousProps {
-  innerRef?: (instance: any) => void
+  innerRef?: React.Ref<{}>;
   theme?: object
 }
 
