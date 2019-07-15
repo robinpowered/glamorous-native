@@ -2,7 +2,6 @@ import React from 'react'
 import {
   FlatList,
   Image,
-  ListView,
   ScrollView,
   SectionList,
   Text,
@@ -85,7 +84,6 @@ describe('rootEl', () => {
 describe('default components', () => {
   expect(shallow(<glamorous.FlatList />).find(FlatList)).toBeDefined()
   expect(shallow(<glamorous.Image />).find(Image)).toBeDefined()
-  expect(shallow(<glamorous.ListView />).find(ListView)).toBeDefined()
   expect(shallow(<glamorous.ScrollView />).find(ScrollView)).toBeDefined()
   expect(shallow(<glamorous.SectionList />).find(SectionList)).toBeDefined()
   expect(shallow(<glamorous.Text />).find(Text)).toBeDefined()

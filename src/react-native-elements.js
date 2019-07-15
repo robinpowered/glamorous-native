@@ -1,7 +1,6 @@
 import {
   FlatList,
   Image,
-  ListView,
   ScrollView,
   SectionList,
   Text,
@@ -16,7 +15,6 @@ import {
 
 export const ReactNativeElementMap = {
   Image,
-  ListView,
   ScrollView,
   Text,
   TextInput,

@@ -35,7 +35,6 @@ function camelCase(tagName) {
 
 // @TODO: automate the named exports
 export const Image = glamorous.Image
-export const ListView = glamorous.ListView
 export const ScrollView = glamorous.ScrollView
 export const Text = glamorous.Text
 export const TextInput = glamorous.TextInput
