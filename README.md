@@ -112,7 +112,7 @@ The `glamorous` function is the main (only) export. It allows you to create glam
 
 #### built-in React Native component factories
 
-For every React Native element, there is an associated `glamorous` component factory attached to the `glamorous` function. As above, you can access these factories like so: `glamorous.view`, `glamorous.text`, `glamorous.listView`, etc.
+For every React Native element, there is an associated `glamorous` component factory attached to the `glamorous` function. As above, you can access these factories like so: `glamorous.view`, `glamorous.text`, etc.
 
 ```js
 const MyStyledView = glamorous.view({margin: 1})

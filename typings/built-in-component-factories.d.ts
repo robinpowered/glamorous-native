@@ -7,7 +7,6 @@ import {
   ImageStyle,
   TextInputProperties,
   ImageProperties,
-  ListViewProperties,
   ScrollViewProps,
   TextProperties,
   TouchableHighlightProperties,
@@ -25,7 +24,6 @@ export type NativeGlamorousComponentFactory<
 
 export interface NativeComponentFactory {
   image: NativeGlamorousComponentFactory<ImageProperties, ImageStyle>
-  listView: NativeGlamorousComponentFactory<ListViewProperties, ViewStyle>
   scrollView: NativeGlamorousComponentFactory<ScrollViewProps, ViewStyle>
   text: NativeGlamorousComponentFactory<TextProperties, TextStyle>
   textInput: NativeGlamorousComponentFactory<TextInputProperties, TextStyle>
