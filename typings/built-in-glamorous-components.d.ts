@@ -7,7 +7,6 @@ import {
   ImageStyle,
   TextInputProperties,
   ImageProperties,
-  ListViewProperties,
   ScrollViewProps,
   TextProperties,
   TouchableHighlightProperties,
@@ -21,9 +20,6 @@ import {
 export interface NativeComponent {
   Image: React.StatelessComponent<
     ImageProperties & ExtraGlamorousProps & ImageStyle
-  >
-  ListView: React.StatelessComponent<
-    ListViewProperties & ExtraGlamorousProps & ViewStyle
   >
   ScrollView: React.StatelessComponent<
     ScrollViewProps & ExtraGlamorousProps & ViewStyle
