@@ -1,52 +1,52 @@
 import { BuiltInGlamorousComponentFactory } from './component-factory'
 
 import {
-  ViewProperties,
+  ViewProps,
   TextStyle,
   ViewStyle,
   ImageStyle,
-  TextInputProperties,
-  ImageProperties,
+  TextInputProps,
+  ImageProps,
   ScrollViewProps,
-  TextProperties,
-  TouchableHighlightProperties,
-  TouchableNativeFeedbackProperties,
-  TouchableOpacityProperties,
+  TextProps,
+  TouchableHighlightProps,
+  TouchableNativeFeedbackProps,
+  TouchableOpacityProps,
   TouchableWithoutFeedbackProps,
-  FlatListProperties,
-  SectionListProperties
+  FlatListProps,
+  SectionListProps
 } from 'react-native'
 
 export type NativeGlamorousComponentFactory<
   ElementProps,
-  Properties
-> = BuiltInGlamorousComponentFactory<ElementProps, Properties>
+  Props
+> = BuiltInGlamorousComponentFactory<ElementProps, Props>
 
 export interface NativeComponentFactory {
-  image: NativeGlamorousComponentFactory<ImageProperties, ImageStyle>
+  image: NativeGlamorousComponentFactory<ImageProps, ImageStyle>
   scrollView: NativeGlamorousComponentFactory<ScrollViewProps, ViewStyle>
-  text: NativeGlamorousComponentFactory<TextProperties, TextStyle>
-  textInput: NativeGlamorousComponentFactory<TextInputProperties, TextStyle>
+  text: NativeGlamorousComponentFactory<TextProps, TextStyle>
+  textInput: NativeGlamorousComponentFactory<TextInputProps, TextStyle>
   touchableHighlight: NativeGlamorousComponentFactory<
-    TouchableHighlightProperties,
+    TouchableHighlightProps,
     ViewStyle
   >
   touchableNativeFeedback: NativeGlamorousComponentFactory<
-    TouchableNativeFeedbackProperties,
+    TouchableNativeFeedbackProps,
     ViewStyle
   >
   touchableOpacity: NativeGlamorousComponentFactory<
-    TouchableOpacityProperties,
+    TouchableOpacityProps,
     ViewStyle
   >
   touchableWithoutFeedback: NativeGlamorousComponentFactory<
     TouchableWithoutFeedbackProps,
     ViewStyle
   >
-  view: NativeGlamorousComponentFactory<ViewProperties, ViewStyle>
-  flatList: NativeGlamorousComponentFactory<FlatListProperties<any>, ViewStyle>
+  view: NativeGlamorousComponentFactory<ViewProps, ViewStyle>
+  flatList: NativeGlamorousComponentFactory<FlatListProps<any>, ViewStyle>
   sectionList: NativeGlamorousComponentFactory<
-    SectionListProperties<any>,
+    SectionListProps<any>,
     ViewStyle
   >
 }
