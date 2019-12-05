@@ -1,54 +1,54 @@
 import { ExtraGlamorousProps } from './glamorous-component'
 
 import {
-  ViewProperties,
+  ViewProps,
   TextStyle,
   ViewStyle,
   ImageStyle,
-  TextInputProperties,
-  ImageProperties,
+  TextInputProps,
+  ImageProps,
   ScrollViewProps,
-  TextProperties,
-  TouchableHighlightProperties,
-  TouchableNativeFeedbackProperties,
-  TouchableOpacityProperties,
+  TextProps,
+  TouchableHighlightProps,
+  TouchableNativeFeedbackProps,
+  TouchableOpacityProps,
   TouchableWithoutFeedbackProps,
-  FlatListProperties,
-  SectionListProperties
+  FlatListProps,
+  SectionListProps
 } from 'react-native'
 
 export interface NativeComponent {
   Image: React.StatelessComponent<
-    ImageProperties & ExtraGlamorousProps & ImageStyle
+    ImageProps & ExtraGlamorousProps & ImageStyle
   >
   ScrollView: React.StatelessComponent<
     ScrollViewProps & ExtraGlamorousProps & ViewStyle
   >
   Text: React.StatelessComponent<
-    TextProperties & ExtraGlamorousProps & TextStyle
+    TextProps & ExtraGlamorousProps & TextStyle
   >
   TextInput: React.StatelessComponent<
-    TextInputProperties & ExtraGlamorousProps & TextStyle
+    TextInputProps & ExtraGlamorousProps & TextStyle
   >
   TouchableHighlight: React.StatelessComponent<
-    TouchableHighlightProperties & ExtraGlamorousProps & ViewStyle
+    TouchableHighlightProps & ExtraGlamorousProps & ViewStyle
   >
   TouchableNativeFeedback: React.StatelessComponent<
-    TouchableNativeFeedbackProperties & ExtraGlamorousProps & ViewStyle
+    TouchableNativeFeedbackProps & ExtraGlamorousProps & ViewStyle
   >
   TouchableOpacity: React.StatelessComponent<
-    TouchableOpacityProperties & ExtraGlamorousProps & ViewStyle
+    TouchableOpacityProps & ExtraGlamorousProps & ViewStyle
   >
   TouchableWithoutFeedback: React.StatelessComponent<
     TouchableWithoutFeedbackProps & ExtraGlamorousProps & ViewStyle
   >
   View: React.StatelessComponent<
-    ViewProperties & ExtraGlamorousProps & ViewStyle
+    ViewProps & ExtraGlamorousProps & ViewStyle
   >
   FlatList: React.StatelessComponent<
-    FlatListProperties<any> & ExtraGlamorousProps & ViewStyle
+    FlatListProps<any> & ExtraGlamorousProps & ViewStyle
   >
   SectionList: React.StatelessComponent<
-    SectionListProperties<any> & ExtraGlamorousProps & ViewStyle
+    SectionListProps<any> & ExtraGlamorousProps & ViewStyle
   >
 }
