@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "babel-preset-react-native": "^1.9.2",
-    "codecov": "^2.2.0",
+    "codecov": "^3.7.1",
     "commitizen": "^2.9.6",
     "cz-conventional-changelog": "^2.0.0",
     "enzyme": "^2.8.2",
