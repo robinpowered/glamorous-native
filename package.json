@@ -53,7 +53,7 @@
     "react-native-mock": "^0.3.1",
     "react-native-mock-render": "0.0.5",
     "react-test-renderer": "^15.5.4",
-    "semantic-release": "^6.3.6"
+    "semantic-release": "^17.2.3"
   },
   "dependencies": {
     "brcast": "^2.0.0"
