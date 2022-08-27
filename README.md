@@ -1,6 +1,14 @@
-<img src="https://github.com/robinpowered/glamorous-native/raw/master/other/logo/full.png" alt="glamorous-native logo" title="glamorous-native" align="right" width="150" height="150" />
+# STATUS: DEPRECATED AND UNMAINTAINED
 
-# glamorous-native
+**Please refer to [@emotion/native](https://github.com/emotion-js/emotion)**
+
+For details on the unmaintained status (and to help people with an automated migration to [emotion](https://emotion.sh)), see https://github.com/paypal/glamorous/issues/419.
+
+<h1 align="center">
+  <img src="https://github.com/robinpowered/glamorous-native/raw/master/other/logo/full.png" alt="glamorous-native logo" title="glamorous-native" width="150" height="150" />
+  <br />
+  glamorous-native
+</h1>
 
 [glamorous][glamorous] for React Native. React component styling solved with an elegant ([inspired](#inspiration)) API, small footprint, and great performance. For full feature documentation, see the [glamorous docs][glamorous-readme].
 
